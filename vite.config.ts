@@ -10,8 +10,11 @@ export default defineConfig({
       '@': path.resolve(__dirname, '.'),
     },
   },
-  // This ensures your environment variables are available in the browser
+  // This line is the "White Screen Killer" — it prevents the 'process' error
   define: {
     'process.env': {},
+  },
+  build: {
+    outDir: 'dist',
   }
 });
